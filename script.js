@@ -1,82 +1,29 @@
-// --- 1. LANGUAGE DATA (UPDATED FOR HALLOWEEN THEME) ---
-const LANGUAGES = {
-    'en': {
-        title_h1: "BARTOUR BERLIN",
-        title_h2: "HALLOWEEN BINGO",
-        start_heading: "WELCOME, MORTAL! 😈",
-        start_message: "Enter your name to start playing for a **FREE SHOT**!",
-        start_placeholder: "Your Spooky Name Here",
-        start_button: "SUMMON THE GAME",
-        win_message_prefix: "WINS THE PRIZE!",
-        win_message_suffix: "You Won! The spirits are pleased. Notify your tour guide!",
-        win_instruction: "Show this screen to your Bartour Host immediately for your treat!",
-        reset_button: "RESET GAME",
-        name_alert: "Please enter a name to start the game!",
-        dares: [
-            "Take a Group Selfie 📸👻",
-            "Show us your Spooky laugh 😈😂",
-            "Cheers with a random stranger 🍻🤝",
-            "Get a picture with someone in a cool Halloween outfit 🎃📸",
-            "Do a quick Halloween pose for 3 seconds 🧛‍♀️🧟",
-            "Swap a costume piece with someone 🎭🤝",
-            "Show a funny Dance Move 🕺💃",
-            "Use a Halloween-themed pick-up line on someone 😉🕸️",
-            "Finish a drink without using your hands 🥤🚫🖐️"
-        ]
-    },
-    'de': {
-        title_h1: "BARTOUR BERLIN",
-        title_h2: "HALLOWEEN BINGO",
-        start_heading: "WILLKOMMEN, STERBLICHER! 😈",
-        start_message: "Bitte geben Sie Ihren Namen ein, um um einen **KOSTENLOSEN SHOT** zu spielen!",
-        start_placeholder: "Ihr Spukiger Name hier",
-        start_button: "SPIEL BESCHWÖREN",
-        win_message_prefix: "GEWINNT DEN PREIS!",
-        win_message_suffix: "Sie haben gewonnen! Die Geister sind zufrieden. Benachrichtigen Sie Ihren Tour Guide!",
-        win_instruction: "Zeigen Sie diesen Bildschirm sofort Ihrem Bartour-Host für Ihre Belohnung!",
-        reset_button: "SPIEL ZURÜCKSETZEN",
-        name_alert: "Bitte geben Sie einen Namen ein, um das Spiel zu starten!",
-        dares: [
-            "Gruppen-Selfie 📸👻",
-            "Zeig uns dein Grusel-Lachen 😈😂",
-            "Stoßt mit einem zufälligen Fremden an 🍻🤝",
-            "Foto mit jmd. in coolem Halloween-Outfit 🎃📸",
-            "Mach eine schnelle Halloween-Pose für 3s 🧛‍♀️🧟",
-            "Tausch ein Kostümteil mit jmd. 🎭🤝",
-            "Zeig einen lustigen Dance-Move 🕺💃",
-            "Benutze eine Halloween-Anmachspruch 😉🕸️",
-            "Trink ein Getränk ohne Hände 🥤🚫🖐️"
-        ]
-    },
-    'es': {
-        title_h1: "BARTOUR BERLIN",
-        title_h2: "BINGO DE HALLOWEEN",
-        start_heading: "¡BIENVENIDO, MORTAL! 😈",
-        start_message: "¡Ingrese su nombre para comenzar a jugar por un **CHUPITO GRATIS**!",
-        start_placeholder: "Tu Nombre Espeluznante Aquí",
-        start_button: "INVOCAR EL JUEGO",
-        win_message_prefix: "¡GANA EL PREMIO!",
-        win_message_suffix: "¡Has ganado! Los espíritus están contentos. ¡Notifica a tu guía!",
-        win_instruction: "¡Muestre esta pantalla a su anfitrión de Bartour inmediatamente para su premio!",
-        reset_button: "REINICIAR JUEGO",
-        name_alert: "¡Por favor, introduzca un nombre para empezar el juego!",
-        dares: [
-            "Tómate una Selfie Grupal 📸👻",
-            "Enséñanos tu Risa Espeluznante 😈😂",
-            "Choca copas con un extraño al azar 🍻🤝",
-            "Foto con alguien con un disfraz de Halloween genial 🎃📸",
-            "Haz una pose rápida de Halloween por 3s 🧛‍♀️🧟",
-            "Intercambia una pieza de disfraz con alguien 🎭🤝",
-            "Muestra un paso de baile divertido 🕺💃",
-            "Usa una frase de ligue temática de Halloween 😉🕸️",
-            "Termina una bebida sin usar las manos 🥤🚫🖐️"
-        ]
-    }
-};
+// --- 1. POLISH GAME DATA ---
+const GAME_TITLE_H1 = "BINGO SEKSI CIPEК";
+const GAME_TITLE_H2 = "HALLOWEEN PARTY";
+const START_HEADING = "Witaj, śmiertelniku. Wpisz swoje imię, aby rozpocząć grę. 😈";
+const START_PLACEHOLDER = "Twoje Imie";
+const START_BUTTON = "ROZPOCZNIJ GRĘ";
+const WIN_MESSAGE_PREFIX = "WYGRYWA NAGRODĘ!";
+const WIN_MESSAGE_SUFFIX = "Gratulacje! Czas na darmowego shota. Zgłoś się do gospodarza!";
+const WIN_INSTRUCTION = "Pokaż ten ekran gospodarzowi imprezy natychmiast po odbiór nagrody!";
+const RESET_BUTTON = "ZACZNIJ OD NOWA";
+const NAME_ALERT = "Proszę podaj imię, aby rozpocząć grę!";
 
-let currentLang = 'en'; // Default language is English
+const DARES = [
+    "Zaśpiewaj przy wszystkich twoja ulubiona piosenkę 🎤🎶",
+    "Zrób toast za duchy obecne w pokoju. 👻🥂",
+    "Wypij łyk z zamkniętymi oczami – ktoś wybiera co. 🙈🥃",
+    "Zrób rundę „do dna” z osobą po prawej. 🍻➡️",
+    "Przez minutę pij ze szklanki bez użycia rąk. 🥤🚫🖐️",
+    "Wypij shota i powiedz najstraszniejsze słowo, jakie znasz. 😨🥃",
+    "Zrób shota, a potem przez 30 sekund udawaj pijanego zombie. 🧟‍♀️😵",
+    "Zrób toast, używając tylko słów zaczynających się na „P”. 🇵🇱🗣️",
+    "Podpierdol komuś element bielizny(stanik, skarpetki, majtki) 😈"
+];
+
 let playerName = "";
-const completedDares = new Array(LANGUAGES[currentLang].dares.length).fill(false);
+const completedDares = new Array(DARES.length).fill(false);
 
 // GLOBAL ELEMENT REFERENCES
 const startPopup = document.getElementById('start-popup');
@@ -90,7 +37,7 @@ function setupBoard() {
     // Set up board listeners (squares)
     const squares = document.querySelectorAll('.square');
     squares.forEach((square, index) => {
-        square.textContent = LANGUAGES[currentLang].dares[index]; 
+        square.textContent = DARES[index]; 
         square.classList.remove('completed');
         square.onclick = () => handleSquareClick(index, square);
     });
@@ -108,7 +55,7 @@ function handleSquareClick(index, squareElement) {
 }
 
 function checkForBingo() {
-    // Current logic: Check for "Blackout" (all squares completed)
+    // Logic remains "Blackout" (all squares completed)
     let allDaresCompleted = completedDares.every(dare => dare === true);
     if (allDaresCompleted) {
         showWinScreen(true);
@@ -121,10 +68,8 @@ function showWinScreen(didWin) {
     const instruction = document.getElementById('win-instruction');
     
     if (didWin) {
-        const langData = LANGUAGES[currentLang];
-        // Note the use of .toUpperCase() for a punchy win message!
-        message.innerHTML = `🎉 **${playerName.toUpperCase()} ${langData.win_message_prefix}** 🎉<br>${langData.win_message_suffix}`;
-        instruction.textContent = langData.win_instruction; 
+        message.innerHTML = `🎉 **${playerName.toUpperCase()} ${WIN_MESSAGE_PREFIX}** 🎉<br>${WIN_MESSAGE_SUFFIX}`;
+        instruction.textContent = WIN_INSTRUCTION; 
         winPopup.classList.remove('hidden');
     }
 }
@@ -136,7 +81,7 @@ function handleCloseModal(event) {
     }
 }
 
-function resetGame(newLang = currentLang) {
+function resetGame() {
     document.getElementById('win-popup').classList.add('hidden');
     
     completedDares.fill(false);
@@ -145,64 +90,29 @@ function resetGame(newLang = currentLang) {
     squares.forEach(square => square.classList.remove('completed'));
     
     nameInput.value = "";
-    currentLang = newLang;
     startGame();
 }
 
 
-// --- UI / EVENT FUNCTIONS (Called by startGame) ---
+// --- UI / EVENT FUNCTIONS (Simplified for single language) ---
 
-function translatePage(lang) {
-    currentLang = lang;
-    const langData = LANGUAGES[lang];
-
+function updatePageText() { 
     // 1. Header
-    document.getElementById('header-h1').textContent = langData.title_h1;
-    document.getElementById('header-h2').textContent = langData.title_h2;
+    document.getElementById('header-h1').textContent = GAME_TITLE_H1;
+    document.getElementById('header-h2').textContent = GAME_TITLE_H2;
 
     // 2. Start Pop-up
-    document.getElementById('start-heading').innerHTML = langData.start_heading;
-    document.getElementById('start-message').innerHTML = langData.start_message;
-    nameInput.placeholder = langData.start_placeholder;
-    startGameButton.textContent = langData.start_button; 
+    document.getElementById('start-heading').innerHTML = START_HEADING;
+    document.getElementById('start-message').textContent = ""; 
+    nameInput.placeholder = START_PLACEHOLDER;
+    startGameButton.textContent = START_BUTTON; 
 
     // 3. Reset Button
-    document.getElementById('reset-button').textContent = langData.reset_button;
+    document.getElementById('reset-button').textContent = RESET_BUTTON;
     
     // 4. Dares 
     setupBoard(); 
 }
-
-function setLanguage(lang) {
-    const langOptionsContainer = document.getElementById('lang-options');
-    const langDropdownButton = document.getElementById('current-lang-display');
-    const langData = LANGUAGES[lang];
-    
-    let flag = '';
-    let langName = '';
-    
-    // Updated flag logic
-    if (lang === 'en') { flag = '🇬🇧'; langName = 'English'; }
-    else if (lang === 'de') { flag = '🇩🇪'; langName = 'Deutsch'; }
-    else if (lang === 'es') { flag = '🇪🇸'; langName = 'Español'; }
-
-    // Update the main display button text (using the full name for clarity in the display)
-    langDropdownButton.innerHTML = `<span class="flag-icon">${flag}</span> ${langName}`;
-    
-    // Update the 'active' class on the list items
-    langOptionsContainer.querySelectorAll('a').forEach(a => a.classList.remove('active'));
-    document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
-
-    if (lang !== currentLang) {
-        resetGame(lang); 
-    }
-}
-
-function toggleLanguageDropdown() {
-    const langOptionsContainer = document.getElementById('lang-options');
-    langOptionsContainer.classList.toggle('show');
-}
-
 
 function handleStartGameClick() {
     let name = nameInput.value.trim();
@@ -211,7 +121,7 @@ function handleStartGameClick() {
         playerName = name;
         startPopup.classList.add('hidden');
     } else {
-        alert(LANGUAGES[currentLang].name_alert);
+        alert(NAME_ALERT);
     }
 }
 
@@ -225,26 +135,13 @@ function setupListeners() {
         button.onclick = handleCloseModal;
     });
 
-    // Attach listener for the dropdown button
-    const langDropdownButton = document.getElementById('current-lang-display');
-    langDropdownButton.onclick = toggleLanguageDropdown;
-    
-    // Attach listeners for language option links
-    const langOptionsContainer = document.getElementById('lang-options');
-    langOptionsContainer.querySelectorAll('a').forEach(option => {
-        const lang = option.getAttribute('data-lang');
-        option.onclick = (e) => {
-            e.preventDefault(); 
-            setLanguage(lang);
-            toggleLanguageDropdown(); // Close the dropdown after selection
-        };
-    });
+    // Removed all language dropdown listeners
 
     document.getElementById('reset-button').onclick = resetGame;
 }
 
 function startGame() {
-    translatePage(currentLang);
+    updatePageText();
     startPopup.classList.remove('hidden');
     nameInput.focus(); 
     setupListeners();
@@ -252,5 +149,4 @@ function startGame() {
 
 
 // --- EXECUTION START ---
-// The script waits for the entire HTML to load, then calls startGame.
 document.addEventListener('DOMContentLoaded', startGame);
