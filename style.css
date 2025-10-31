@@ -1,0 +1,356 @@
+/* Custom Fonts for the Berlin Bartour Vibe */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&display=swap');
+
+:root {
+    /* Halloween Theme Colors */
+    --spooky-orange: #ff6600; 
+    --spooky-purple: #9900ff;
+    --dark-bg: #1a1a1a;        /* Near-black for maximum contrast */
+    --light-text: #f0ead6;     /* Light, slightly off-white for text on dark bg */
+    --bingo-square-bg: #333333; /* Darker square background */
+    --bingo-border: var(--spooky-purple); /* Purple for the grid lines */
+    --text-color-light-bg: #000000; /* Black text for light backgrounds */
+}
+
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    font-family: Arial, sans-serif;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 10px;
+    /* SPIDERWEB BACKGROUND PATTERN */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23222222' fill-opacity='0.4'%3E%3Cpath d='M80 0H0V80h80V0zM10 10v60h60V10H10zM20 20v40h40V20H20zM30 30v20h20V30H30zM40 40'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 40px; 
+}
+
+/* --- Language Dropdown Styles --- (Kept the same as previous Halloween update) */
+
+.language-dropdown {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 50;
+    font-size: 0.9em;
+}
+
+.dropdown-button {
+    background-color: var(--spooky-orange);
+    color: var(--text-color-light-bg);
+    padding: 8px 12px;
+    border: 2px solid var(--spooky-purple);
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.2s;
+    box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+}
+
+.dropdown-button:hover {
+    background-color: #e65c00; 
+}
+
+/* Dropdown Content List */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    margin-top: 5px;
+    background-color: var(--bingo-square-bg);
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.9);
+    z-index: 51;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--spooky-purple);
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+/* Link Style for each language option */
+.dropdown-content a {
+    color: var(--light-text);
+    padding: 8px 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+}
+
+.dropdown-content a:hover {
+    background-color: #444444; 
+}
+
+.dropdown-content a.active {
+    background-color: var(--spooky-purple);
+    color: var(--light-text);
+}
+
+.flag-icon {
+    font-size: 1.2em;
+}
+
+/* --- Header & Logo Styles (RESTORED LOGO STYLES) --- */
+
+header {
+    text-align: left;
+    color: var(--light-text);
+    margin-bottom: 10px; 
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+    padding-top: 40px; 
+    display: flex; 
+    align-items: center; /* ALIGNED to support image and text */
+    flex-wrap: nowrap; 
+    gap: 10px; 
+}
+
+/* Logo Styles (RESTORED) */
+#company-logo {
+    max-width: 60px; 
+    min-width: 60px; 
+    height: auto;
+    flex-shrink: 0; 
+}
+
+/* Header Text Container */
+.header-text {
+    flex-grow: 1; 
+    min-width: 0; 
+    text-align: left; /* Aligned to the left next to the logo */
+}
+
+/* Heading Sizes (Spooky Glow) */
+h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 2.2em; 
+    letter-spacing: 3px;
+    color: var(--spooky-orange);
+    text-shadow: 0 0 5px var(--spooky-orange), 0 0 10px var(--spooky-purple); /* Spooky glow */
+    line-height: 1;
+}
+
+h2 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.2em; 
+    margin-top: 5px; 
+    color: var(--light-text);
+    text-shadow: 1px 1px var(--spooky-purple);
+}
+
+/* --- Bingo Grid Styles --- (Kept the same as previous Halloween update) */
+
+.bingo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
+    height: 60vh;
+    gap: 7px; 
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--bingo-border);
+    padding: 7px;
+    border: 10px solid var(--bingo-border);
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.9), 0 0 15px var(--spooky-purple); 
+}
+
+.square {
+    background-color: var(--bingo-square-bg); 
+    color: var(--light-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px; 
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 1em; 
+    font-weight: bold;
+    border: 2px solid var(--spooky-purple);
+    transition: background-color 0.3s, transform 0.1s;
+    user-select: none; 
+    line-height: 1.1; 
+    word-break: break-word; 
+    overflow: hidden; 
+    border-radius: 5px;
+}
+
+/* Style for a completed dare (Ghostly appearance) */
+.square.completed {
+    background-color: var(--spooky-purple);
+    color: var(--light-text);
+    text-decoration: line-through;
+    opacity: 0.8;
+    transform: scale(0.96);
+    border-color: var(--spooky-orange);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+/* --- Button Style --- (Kept the same as previous Halloween update) */
+
+#reset-button {
+    background-color: var(--spooky-orange);
+    color: var(--text-color-light-bg);
+    border: 3px solid var(--spooky-purple);
+    padding: 12px 25px;
+    margin-top: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s, transform 0.1s;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7);
+}
+
+#reset-button:hover {
+    background-color: #e65c00;
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* --- Modal (Pop-up) Styles --- (Kept the same as previous Halloween update) */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.modal-content {
+    background-color: var(--bingo-square-bg);
+    color: var(--light-text);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(255, 102, 0, 0.6);
+    max-width: 90%;
+    border: 5px solid var(--spooky-purple);
+    position: relative;
+    animation: none;
+}
+
+#win-popup .modal-content {
+    animation: pulse 1s infinite alternate;
+}
+
+.modal-content h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 3em; 
+    margin-bottom: 15px;
+    color: var(--spooky-orange); 
+    text-shadow: 2px 2px var(--spooky-purple); 
+}
+
+.modal-content p {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--light-text);
+    margin-bottom: 20px;
+}
+
+#name-input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 3px solid var(--spooky-orange);
+    border-radius: 5px;
+    font-size: 1.1em;
+    text-align: center;
+    background-color: #2a2a2a;
+    color: var(--light-text);
+}
+
+#start-game-button {
+    background-color: var(--spooky-orange); 
+    color: var(--text-color-light-bg); 
+    border: 3px solid var(--spooky-purple); 
+    padding: 12px 25px; 
+    font-size: 1.2em; 
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px; 
+    transition: background-color 0.2s, transform 0.1s;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+#start-game-button:hover {
+    background-color: #e65c00;
+    transform: translateY(-2px) scale(1.02);
+}
+
+.close-btn {
+    color: var(--spooky-purple);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: var(--spooky-orange);
+}
+
+@keyframes pulse {
+    from { transform: scale(1); box-shadow: 0 0 40px rgba(255, 102, 0, 0.6); }
+    to { transform: scale(1.05); box-shadow: 0 0 60px rgba(255, 102, 0, 1); } 
+}
+
+@media (max-width: 375px) {
+    h1 {
+        font-size: 2.2em;
+    }
+    h2 {
+        font-size: 1.1em;
+    }
+    .square {
+        min-height: 90px;
+        font-size: 0.85em;
+        padding: 5px;
+    }
+    #reset-button {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+    .modal-content h3 {
+        font-size: 2.5em;
+    }
+    .modal-content p {
+        font-size: 1.1em;
+    }
+}
