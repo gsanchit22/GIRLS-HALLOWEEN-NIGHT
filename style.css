@@ -33,114 +33,33 @@ body {
     background-size: 40px; 
 }
 
-/* --- Language Dropdown Styles --- (Kept the same as previous Halloween update) */
+/* --- Language Dropdown Styles - REMOVED COMPLETELY --- */
 
-.language-dropdown {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 50;
-    font-size: 0.9em;
-}
 
-.dropdown-button {
-    background-color: var(--spooky-orange);
-    color: var(--text-color-light-bg);
-    padding: 8px 12px;
-    border: 2px solid var(--spooky-purple);
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: background-color 0.2s;
-    box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
-}
-
-.dropdown-button:hover {
-    background-color: #e65c00; 
-}
-
-/* Dropdown Content List */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    margin-top: 5px;
-    background-color: var(--bingo-square-bg);
-    min-width: 130px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.9);
-    z-index: 51;
-    border-radius: 6px;
-    overflow: hidden;
-    border: 1px solid var(--spooky-purple);
-}
-
-.dropdown-content.show {
-    display: block;
-}
-
-/* Link Style for each language option */
-.dropdown-content a {
-    color: var(--light-text);
-    padding: 8px 10px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-weight: bold;
-}
-
-.dropdown-content a:hover {
-    background-color: #444444; 
-}
-
-.dropdown-content a.active {
-    background-color: var(--spooky-purple);
-    color: var(--light-text);
-}
-
-.flag-icon {
-    font-size: 1.2em;
-}
-
-/* --- Header & Logo Styles (RESTORED LOGO STYLES) --- */
+/* --- Header & Logo Styles (CENTERED TITLE) --- */
 
 header {
-    text-align: left;
+    text-align: center;
     color: var(--light-text);
     margin-bottom: 10px; 
     padding: 10px;
     width: 100%;
     max-width: 500px;
-    padding-top: 40px; 
-    display: flex; 
-    align-items: center; /* ALIGNED to support image and text */
-    flex-wrap: nowrap; 
-    gap: 10px; 
+    padding-top: 20px; /* Reduced padding as no dropdown is present */
+    display: block; 
 }
 
-/* Logo Styles (RESTORED) */
-#company-logo {
-    max-width: 60px; 
-    min-width: 60px; 
-    height: auto;
-    flex-shrink: 0; 
-}
+/* Removed: #company-logo styles */
 
 /* Header Text Container */
 .header-text {
-    flex-grow: 1; 
-    min-width: 0; 
-    text-align: left; /* Aligned to the left next to the logo */
+    text-align: center; 
 }
 
 /* Heading Sizes (Spooky Glow) */
 h1 {
     font-family: 'Bangers', cursive;
-    font-size: 2.2em; 
+    font-size: 2.8em; 
     letter-spacing: 3px;
     color: var(--spooky-orange);
     text-shadow: 0 0 5px var(--spooky-orange), 0 0 10px var(--spooky-purple); /* Spooky glow */
@@ -149,13 +68,13 @@ h1 {
 
 h2 {
     font-family: 'Permanent Marker', cursive;
-    font-size: 1.2em; 
+    font-size: 1.5em; 
     margin-top: 5px; 
     color: var(--light-text);
     text-shadow: 1px 1px var(--spooky-purple);
 }
 
-/* --- Bingo Grid Styles --- (Kept the same as previous Halloween update) */
+/* --- Bingo Grid Styles --- */
 
 .bingo-grid {
     display: grid;
@@ -204,7 +123,7 @@ h2 {
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
-/* --- Button Style --- (Kept the same as previous Halloween update) */
+/* --- Button Style --- */
 
 #reset-button {
     background-color: var(--spooky-orange);
@@ -227,7 +146,7 @@ h2 {
     transform: translateY(-2px) scale(1.02);
 }
 
-/* --- Modal (Pop-up) Styles --- (Kept the same as previous Halloween update) */
+/* --- Modal (Pop-up) Styles --- */
 
 .modal {
     position: fixed;
